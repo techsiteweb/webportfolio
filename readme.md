@@ -17,7 +17,7 @@ package.json file as follows:
     
 Once this is done and you run: 
 
-    npm run sass 
+    npm run sass //keep sass listening (it's like a server for css)
 it will listen for changes to the scss folder and create a new css file (in the specified location above) for the browser to understand.
 
 When you are working with SCSS you do not touch the .css file created by the sass compiler. You will work directly on the .scss file.

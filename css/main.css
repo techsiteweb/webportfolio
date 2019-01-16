@@ -21,6 +21,87 @@
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(6.5px, -6px); }
 
+/* === Main manu overlay === */
+.menu {
+  visibility: hidden;
+  opacity: 0.9;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  /* Here we take care of the navigation part to come down from the top*/
+  /* Here we take care of the branding part of the navigation to come up from the bottom*/
+  /* Navigation items setup to slide from the right*/
+  /* Style for the links */ }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.3s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #444444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.3s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../images/dog.jpg");
+      border-radius: 50%;
+      border: 3px solid #ff5733; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.3s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #ff5733; }
+  .menu .nav-link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    color: white; }
+    .menu .nav-link:hover {
+      color: #ff5733; }
+
+/* To create the effect of each nav item coming after the other from the right*/
+/*We use a sass for loop to go through all our items and delay their showing by 0.1s*/
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.nav-item:nth-child(6) {
+  transition-delay: 0.6s; }
+
 * {
   box-sizing: border-box; }
 

@@ -19,25 +19,109 @@
     &.close {
         transform: rotate(180deg);
         
-        
         .btn-line {
             //top line - rotate
             &:nth-child(1) {
                 transform: rotate(45deg) translate(5px, 5px);
-                
             }
-            
             //middle line - hide
             &:nth-child(2) {
                 opacity: 0;
             }
-            
-            
             //bottom line - rotate
             &:nth-child(3) {
             transform: rotate(-45deg) translate(6.5px, -6px);
             }
-            
         }
+    }
+}
+
+/* === Main manu overlay === */
+.menu {
+    visibility: hidden;
+    opacity: 0.9;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    
+    &.show { //on click the show class is added making the menu visible
+        visibility: visible;
+    }
+    
+    &-branding, &-nav { //this is the same as .menu-branding, .menu-nav
+        display: flex;
+        flex-flow: column wrap; //we want the menu as a column
+        justify-content: center; //horizontally centered
+        align-items: center; //vertically centered
+        float: left;
+        width: 50%; //each side take 50% of the width
+        height: 100vh;
+        overflow: hidden; //no scroll bars desired
+    }
+    /* Here we take care of the navigation part to come down from the top*/
+    &-nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 5);
+        transform: translate3d(0, -100%, 0); //this is to put the vertical navigation at the top (-100%)
+        @include easeOut;
+        
+        &.show {
+            transform: translate3d(0, 0, 0); //this will make it come down from the top it was put initially
+        }
+    }
+    /* Here we take care of the branding part of the navigation to come up from the bottom*/
+    &-branding {
+        background: $primary-color;
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+        
+        &.show {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url("../images/dog.jpg");
+            border-radius: 50%;
+            border: 3px solid $secondary-color;
+        }
+    } 
+    /* Navigation items setup to slide from the right*/
+    .nav-item {
+        transform: translate3d(600px, 0, 0); //we put the items to the right
+        @include easeOut;
+        
+       &.show {
+           transform: translate3d(0, 0, 0); //show it coming from the right
+       } 
+       
+       &.current > a { //we want the current page active with the secondary color
+           color: $secondary-color;
+       }
+    }
+    /* Style for the links */
+    .nav-link {
+        position: relative;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        color: rgb(255, 255, 255);
+        
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+/* To create the effect of each nav item coming after the other from the right*/
+/*We use a sass for loop to go through all our items and delay their showing by 0.1s*/
+@for $i from 1 through 6 {
+    .nav-item:nth-child(#{$i}) {
+        transition-delay: $i * 0.1s;
     }
 }

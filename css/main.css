@@ -1,3 +1,4 @@
+/* Here we add the media query mixins for responsiveness */
 /* ===== Menu button =====*/
 .menu-btn {
   position: absolute;
@@ -101,6 +102,39 @@
 
 .nav-item:nth-child(6) {
   transition-delay: 0.6s; }
+
+/* == Xtra Large Screens == */
+/* == Desktop & Laptop Screens == */
+/* == Small Laptops and Tables == */
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../images/dog.jpg");
+      width: 150px;
+      height: 150px; } }
+
+/* == Smartphones == */
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }
 
 * {
   box-sizing: border-box; }

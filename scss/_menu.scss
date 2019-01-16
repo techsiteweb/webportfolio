@@ -1,0 +1,43 @@
+/* ===== Menu button =====*/
+.menu-btn {
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    z-index: 3;
+    @include easeOut;
+    
+    .btn-line {
+        background: rgb(255,255,255);
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        @include easeOut;
+    }
+    
+    // --- Menu lines transform into a cross on click ---
+    &.close {
+        transform: rotate(180deg);
+        
+        
+        .btn-line {
+            //top line - rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+                
+            }
+            
+            //middle line - hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            
+            
+            //bottom line - rotate
+            &:nth-child(3) {
+            transform: rotate(-45deg) translate(6.5px, -6px);
+            }
+            
+        }
+    }
+}

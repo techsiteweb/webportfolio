@@ -29,6 +29,16 @@ $background-opacity: 0.9;
     }
 }
 
+/* Set text color depending on background */
+/* We need a function for this not a @mixin */
+// @function set-text-color($color) {
+//     @if (lightness($color) > 40) {
+//         @return rgb(0, 0, 0);
+//     } @else {
+//         @return rgb(255, 255, 255);
+//     }
+// }
+
 
 /* Here we add the media query mixins for responsiveness */
 @mixin mediaSm {

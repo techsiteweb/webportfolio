@@ -22,3 +22,8 @@ it will listen for changes to the scss folder and create a new css file (in the 
 
 When you are working with SCSS you do not touch the .css file created by the sass compiler. You will work directly on the .scss file.
 But you still need to point your index.html to css/main.css (not to scss/main.scss)
+
+** SASS STUFF **
+
+    In SASS you can extend a class to another class. It means adding all the properties of a class inside a class by using
+    keyword: @extend .class name

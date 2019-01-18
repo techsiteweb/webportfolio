@@ -210,6 +210,12 @@ main {
       border-color: #ff5733;
       transition: all 0.3s ease-out; }
 
+/* ==== Contact Page Styling ==== */
+.boxes {
+  display: grid;
+  grid-template-areas: "address contact-form" "map contact-form"; }
+
+/* ==== Styling the buttons ==== */
 .btn, .btn-dark, .btn-light {
   display: block;
   padding: 0.5rem 1rem;

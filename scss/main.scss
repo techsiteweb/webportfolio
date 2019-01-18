@@ -129,6 +129,17 @@ main {
     }
 }
 
+/* ==== Contact Page Styling ==== */
+.boxes {
+    display: grid;
+    grid-template-areas:
+    "address contact-form"
+    "map contact-form"
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+/* ==== Styling the buttons ==== */
 .btn {
     display: block;
     padding: 0.5rem 1rem;

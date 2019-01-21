@@ -53,13 +53,13 @@ $text-color: rgb(255,255,255);*/
     list-style: none;
     margin: 0;
     padding: 0;
-    background: #000205;
+    background: #1b354b;
     transform: translate3d(0, -100%, 0);
     transition: all 0.3s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #00101e;
+    background: #22425e;
     transform: translate3d(0, 100%, 0);
     transition: all 0.3s ease-out; }
     .menu-branding.show {
@@ -113,8 +113,8 @@ $text-color: rgb(255,255,255);*/
   box-sizing: border-box; }
 
 body {
-  background: #00101e;
-  color: rgba(255, 255, 255, 0.7);
+  background: #22425e;
+  color: rgba(255, 255, 255, 0.8);
   height: 100%;
   margin: 0;
   line-height: 1.5; }
@@ -128,7 +128,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 16, 30, 0.9);
+      background: rgba(34, 66, 94, 0.9);
       z-index: -1; }
 
 h1, h2, h3 {
@@ -139,10 +139,10 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(0, 21, 40, 0.5); }
+    background: rgba(37, 71, 101, 0.5); }
 
 a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none; }
 
 header {
@@ -157,7 +157,7 @@ main {
   padding: 4rem;
   min-height: calc(100vh - 4rem); }
   main .icons {
-    margin-top: 1rem; }
+    margin: 1rem 0; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
@@ -196,7 +196,7 @@ main {
   grid-area: job3; }
 
 .job {
-  background: #001e38;
+  background: #294f71;
   padding: 0.5rem;
   border-bottom: 5px solid #ff5733; }
 
@@ -219,7 +219,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   /*We want 2 columns 1fr each*/
   grid-auto-rows: minmax(100px, auto);
-  grid-gap: 0.3em; }
+  grid-gap: 2.3em; }
 
 .address {
   grid-column: 1 / 2;
@@ -228,15 +228,55 @@ main {
 .contact-form {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
-  height: 870px; }
+  border-radius: 0; }
+
+.contact-lg-heading {
+  font-size: 4rem; }
+
+.contact-sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 0; }
+
+.my-email, .my-phone {
+  padding: 0.4rem 0;
+  letter-spacing: 0.1rem; }
 
 .map {
+  height: 350px;
   grid-column: 1 / 2;
   grid-row: 2 / 3; }
 
+.card {
+  background: rgba(113, 144, 170, 0.9);
+  height: 100%;
+  border-radius: 0.2rem; }
+
+.card-header {
+  padding: 1.85rem 1.25rem;
+  background: none; }
+  .card-header h2 {
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.1rem;
+    font-weight: 600; }
+
+.input-group input {
+  background: rgba(255, 255, 255, 0.8); }
+
 .textarea {
-  width: auto;
-  height: 300px; }
+  padding: 1.2rem 0; }
+
+.comments {
+  width: 100%;
+  height: 215px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.2rem; }
+
+.submit-btn {
+  border-radius: 0.2rem;
+  background-color: #22425e;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.1rem;
+  font-weight: 500; }
 
 /* ==== Styling the buttons ==== */
 .btn, .btn-dark, .btn-light {
@@ -250,18 +290,18 @@ main {
 
 /* Here we are extending btn class  */
 .btn-dark {
-  background: black;
-  color: white; }
+  background: #070d13;
+  color: rgba(255, 255, 255, 0.8); }
 
 .btn-light {
-  background: #1e96ff;
+  background: #a2c1dd;
   color: #333333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: black;
-  color: set-text-color(#00101e);
+  background: #142839;
+  color: set-text-color(#22425e);
   height: 4rem; }
 
 /* == Xtra Large Screens == */
@@ -311,3 +351,25 @@ main {
     margin-top: 10vh; }
   .projects {
     grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 769px) {
+  .boxes {
+    grid-template-areas: "address" "contact-form" "map";
+    grid-template-columns: 1fr; }
+  .address {
+    grid-area: address; }
+  .map {
+    grid-area: map; }
+  .contact-form {
+    grid-area: contact-form; } }
+
+@media screen and (min-width: 770px) and (max-width: 1114px) {
+  .boxes {
+    grid-template-areas: "address map" "contact-form contact-form";
+    grid-template-columns: repeat(2, 1fr); }
+  .address {
+    grid-area: address; }
+  .map {
+    grid-area: map; }
+  .contact-form {
+    grid-area: contact-form; } }

@@ -77,3 +77,47 @@
        grid-template-columns: 1fr;
    }
 }
+
+
+@include contactSm {
+    .boxes {
+        grid-template-areas:
+        "address"
+        "contact-form"
+        "map";
+        grid-template-columns: 1fr;
+    }
+    
+     .address {
+        grid-area: address;
+    }
+    
+    .map {
+        grid-area: map;
+    }
+    
+    .contact-form {
+        grid-area: contact-form;
+    }
+}
+
+@include contactMd {
+    .boxes {
+        grid-template-areas:
+        "address map"
+        "contact-form contact-form";
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .address {
+        grid-area: address;
+    }
+    
+    .map {
+        grid-area: map;
+    }
+    
+    .contact-form {
+        grid-area: contact-form;
+    }
+}

@@ -50,7 +50,7 @@ main {
     min-height: calc(100vh - 4rem);
     
     .icons {
-        margin-top: 1rem;
+        margin: 1rem 0;
         
         a {
             padding: 0.4rem;
@@ -134,7 +134,7 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /*We want 2 columns 1fr each*/
 	grid-auto-rows: minmax(100px, auto);
-	grid-gap: 0.3em;
+	grid-gap: 2.3em;
 }
 
 .address {
@@ -145,18 +145,69 @@ main {
 .contact-form {
     grid-column: 2 / 3;
 	grid-row: 1 / 3;
-	height: 870px;
+	border-radius: 0;
 }
 
+.contact-lg-heading {
+    font-size: 4rem;
+}
+
+.contact-sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 0;
+    // background: rgba(lighten($primary-color, 2), 0.5);
+}
+
+.my-email, .my-phone {
+    padding: 0.4rem 0;
+    letter-spacing: 0.1rem;
+}
 .map {
+    height: 350px;
     grid-column: 1 / 2;
 	grid-row: 2 / 3;
 }
 
-.textarea {
-    width: auto;
-    height: 300px;
+.card {
+    // background: rgba(37, 71, 101, 0.2);
+    background: rgba(113, 144, 170, 0.9);
+    height: 100%;
+    border-radius: 0.2rem;
 }
+
+.card-header{
+    padding: 1.85rem 1.25rem;
+    background: none;
+    
+    h2 {
+        color: $text-color;
+        letter-spacing: 0.1rem;
+        font-weight: 600;
+    }
+}
+.input-group input {
+    background: $text-color;
+}
+.textarea {
+    padding: 1.2rem 0;
+}
+
+.comments {
+    width: 100%;
+    height: 215px;
+    background: $text-color;
+    border-radius: 0.2rem;
+}
+.submit-btn {
+    border-radius: 0.2rem;
+    background-color: $primary-color;
+    color: $text-color; 
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+
+
+
 /* ==== Styling the buttons ==== */
 .btn {
     display: block;
@@ -171,8 +222,8 @@ main {
 /* Here we are extending btn class  */
 .btn-dark {
     @extend .btn;
-    background: darken($primary-color, 50);
-    color: rgb(255, 255, 255);
+    background: darken($primary-color, 20);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .btn-light {

@@ -1,3 +1,6 @@
+/*$primary-color: rgb(68,68,68);
+$secondary-color: rgb(255, 87, 51); 
+$text-color: rgb(255,255,255);*/
 /* Set text color depending on background */
 /* We need a function for this not a @mixin */
 /* Here we add the media query mixins for responsiveness */
@@ -50,13 +53,13 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background: #373737;
+    background: #000205;
     transform: translate3d(0, -100%, 0);
     transition: all 0.3s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #444444;
+    background: #00101e;
     transform: translate3d(0, 100%, 0);
     transition: all 0.3s ease-out; }
     .menu-branding.show {
@@ -110,8 +113,8 @@
   box-sizing: border-box; }
 
 body {
-  background: #444444;
-  color: white;
+  background: #00101e;
+  color: rgba(255, 255, 255, 0.7);
   height: 100%;
   margin: 0;
   line-height: 1.5; }
@@ -125,7 +128,7 @@ body {
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(68, 68, 68, 0.9);
+      background: rgba(0, 16, 30, 0.9);
       z-index: -1; }
 
 h1, h2, h3 {
@@ -136,10 +139,10 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(0, 21, 40, 0.5); }
 
 a {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none; }
 
 header {
@@ -193,7 +196,7 @@ main {
   grid-area: job3; }
 
 .job {
-  background: #515151;
+  background: #001e38;
   padding: 0.5rem;
   border-bottom: 5px solid #ff5733; }
 
@@ -251,14 +254,14 @@ main {
   color: white; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #1e96ff;
   color: #333333; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #2b2b2b;
-  color: set-text-color(#444444);
+  background: black;
+  color: set-text-color(#00101e);
   height: 4rem; }
 
 /* == Xtra Large Screens == */

@@ -339,6 +339,14 @@ main {
       background: url("../images/dog.jpg");
       width: 150px;
       height: 150px; }
+  .port-project {
+    background: url("../images/project.jpg");
+    width: 150px;
+    height: 150px; }
+  .port-contact {
+    background: url("../images/contact.jpg");
+    width: 150px;
+    height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }

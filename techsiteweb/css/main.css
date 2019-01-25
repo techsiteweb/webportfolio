@@ -70,14 +70,14 @@ $text-color: rgb(255,255,255);*/
       background: url("../images/dog.jpg");
       background-image: center;
       border-radius: 50%;
-      border: 3px solid #b3cfff; }
+      border: 3px solid #ff5733; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 0.3s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
-      color: #b3cfff; }
+      color: #ff5733; }
   .menu .nav-link {
     position: relative;
     display: inline-block;
@@ -87,7 +87,7 @@ $text-color: rgb(255,255,255);*/
     padding: 1rem 0;
     color: white; }
     .menu .nav-link:hover {
-      color: #b3cfff; }
+      color: #ff5733; }
 
 /* To create the effect of each nav item coming after the other from the right*/
 /*We use a sass for loop to go through all our items and delay their showing by 0.1s*/
@@ -151,7 +151,7 @@ header {
   width: 100%; }
 
 .text-second {
-  color: #b3cfff; }
+  color: #ff5733; }
 
 main {
   padding: 4rem;
@@ -161,7 +161,7 @@ main {
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #b3cfff;
+        color: #ff5733;
         transition: all 0.3s ease-out; }
   main#home {
     overflow: hidden; }
@@ -180,7 +180,7 @@ main {
   height: 200px;
   margin: auto;
   border-radius: 50%;
-  border: 3px solid #b3cfff; }
+  border: 3px solid #ff5733; }
 
 .bio {
   grid-area: bio;
@@ -198,7 +198,7 @@ main {
 .job {
   background: #cddfff;
   padding: 0.5rem;
-  border-bottom: 5px solid #b3cfff; }
+  border-bottom: 5px solid #ff5733; }
 
 /* === Porjects === */
 .projects {
@@ -210,7 +210,7 @@ main {
     border: 3px solid white; }
     .projects img:hover {
       opacity: 0.5;
-      border-color: #b3cfff;
+      border-color: #ff5733;
       transition: all 0.3s ease-out; }
 
 /* ==== Contact Page Styling ==== */
@@ -285,8 +285,8 @@ main {
   border: 0;
   margin-bottom: 0.3rem; }
   .btn:hover, .btn-dark:hover, .btn-light:hover {
-    background: #b3cfff;
-    color: set-text-color(#b3cfff); }
+    background: #ff5733;
+    color: set-text-color(#ff5733); }
 
 /* Here we are extending btn class  */
 .btn-dark {

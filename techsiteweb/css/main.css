@@ -1,0 +1,375 @@
+/*$primary-color: rgb(68,68,68);
+$secondary-color: rgb(255, 87, 51); 
+$text-color: rgb(255,255,255);*/
+/* Set text color depending on background */
+/* We need a function for this not a @mixin */
+/* Here we add the media query mixins for responsiveness */
+/* ===== Menu button =====*/
+.menu-btn {
+  position: absolute;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-out; }
+  .menu-btn .btn-line {
+    background: white;
+    width: 28px;
+    height: 3px;
+    margin: 0 0 5px 0;
+    transition: all 0.3s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(6.5px, -6px); }
+
+/* === Main manu overlay === */
+.menu {
+  visibility: hidden;
+  opacity: 0.9;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  /* Here we take care of the navigation part to come down from the top*/
+  /* Here we take care of the branding part of the navigation to come up from the bottom*/
+  /* Navigation items setup to slide from the right*/
+  /* Style for the links */ }
+  .menu.show {
+    visibility: visible; }
+  .menu-branding, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #9abfff;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.3s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: #b3cfff;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.3s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../images/dog.jpg");
+      background-image: center;
+      border-radius: 50%;
+      border: 3px solid #b3cfff; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.3s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #b3cfff; }
+  .menu .nav-link {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    color: white; }
+    .menu .nav-link:hover {
+      color: #b3cfff; }
+
+/* To create the effect of each nav item coming after the other from the right*/
+/*We use a sass for loop to go through all our items and delay their showing by 0.1s*/
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+.nav-item:nth-child(5) {
+  transition-delay: 0.5s; }
+
+.nav-item:nth-child(6) {
+  transition-delay: 0.6s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #b3cfff;
+  color: rgba(255, 255, 255, 0.8);
+  height: 100%;
+  margin: 0;
+  line-height: 1.5; }
+  body#bg-image {
+    background: url(../images/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-image .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(179, 207, 255, 0.9);
+      z-index: -1; }
+
+h1, h2, h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(189, 213, 255, 0.5); }
+
+a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-second {
+  color: #b3cfff; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 4rem); }
+  main .icons {
+    margin: 1rem 0; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #b3cfff;
+        transition: all 0.3s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+
+.about-image {
+  grid-area: bioimage;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #b3cfff; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.job-1 {
+  grid-area: job1; }
+
+.job-2 {
+  grid-area: job2; }
+
+.job-3 {
+  grid-area: job3; }
+
+.job {
+  background: #cddfff;
+  padding: 0.5rem;
+  border-bottom: 5px solid #b3cfff; }
+
+/* === Porjects === */
+.projects {
+  display: grid;
+  grid-gap: 1.3rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects img {
+    width: 100%;
+    border: 3px solid white; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #b3cfff;
+      transition: all 0.3s ease-out; }
+
+/* ==== Contact Page Styling ==== */
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*We want 2 columns 1fr each*/
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 2.3em; }
+
+.address {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2; }
+
+.contact-form {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  border-radius: 0; }
+
+.contact-lg-heading {
+  font-size: 4rem; }
+
+.contact-sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 0; }
+
+.my-email, .my-phone {
+  padding: 0.4rem 0;
+  letter-spacing: 0.1rem; }
+
+.map {
+  height: 350px;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3; }
+
+.card {
+  background: rgba(113, 144, 170, 0.9);
+  height: 100%;
+  border-radius: 0.2rem; }
+
+.card-header {
+  padding: 1.85rem 1.25rem;
+  background: none; }
+  .card-header h2 {
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 0.1rem;
+    font-weight: 600; }
+
+.input-group input {
+  background: rgba(255, 255, 255, 0.8); }
+
+.textarea {
+  padding: 1.2rem 0; }
+
+.comments {
+  width: 100%;
+  height: 215px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.2rem; }
+
+.submit-btn {
+  border-radius: 0.2rem;
+  background-color: #b3cfff;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.1rem;
+  font-weight: 500; }
+
+/* ==== Styling the buttons ==== */
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #b3cfff;
+    color: set-text-color(#b3cfff); }
+
+/* Here we are extending btn class  */
+.btn-dark {
+  background: #4d8fff;
+  color: rgba(255, 255, 255, 0.8); }
+
+.btn-light {
+  background: white;
+  color: #333333; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #80afff;
+  color: set-text-color(#b3cfff);
+  height: 4rem; }
+
+/* == Xtra Large Screens == */
+@media screen and (min-width: 1201px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+/* == Desktop & Laptop Screens == */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+/* == Small Laptops and Tables == */
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav, div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show, div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portrait {
+      background: url("../images/dog.jpg");
+      width: 150px;
+      height: 150px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
+
+/* == Smartphones == */
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .projects {
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 769px) {
+  .boxes {
+    grid-template-areas: "address" "contact-form" "map";
+    grid-template-columns: 1fr; }
+  .address {
+    grid-area: address; }
+  .map {
+    grid-area: map; }
+  .contact-form {
+    grid-area: contact-form; } }
+
+@media screen and (min-width: 770px) and (max-width: 1114px) {
+  .boxes {
+    grid-template-areas: "address map" "contact-form contact-form";
+    grid-template-columns: repeat(2, 1fr); }
+  .address {
+    grid-area: address; }
+  .map {
+    grid-area: map; }
+  .contact-form {
+    grid-area: contact-form; } }

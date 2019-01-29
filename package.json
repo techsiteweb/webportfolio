@@ -1,7 +1,7 @@
 {
   "name": "techsiteweb",
   "version": "1.0.0",
-  "description": "",
+  "description": "Full Stack Portfolio",
   "main": "index.js",
   "dependencies": {
     "gh-pages": "^2.0.1",
@@ -9,13 +9,16 @@
   },
   "devDependencies": {},
   "scripts": {
-    "sass": "node-sass -w scss/ -o techsiteweb/css/ --recursive"
+    "sass": "node-sass -w scss/ -o css/ --recursive"
   },
-  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techsiteweb/webportfolio.git"
+  },
   "author": "Onel / TSW",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/techsiteweb/webportfolio/issues"
   },
-  "homepage": "https://github.com/techsiteweb/webportfolio.git"
+  "homepage": "https://github.com/techsiteweb/webportfolio#readme"
 }

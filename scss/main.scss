@@ -123,6 +123,7 @@ main {
     "education skills skills"
     "education languages languages";
     grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
     
 }
 

@@ -172,7 +172,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 2rem;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "edu-skills-header edu-skills-header edu-skills-header" "education skills skills" "education languages languages";
   grid-template-columns: repeat(3, 1fr); }
 
 .about-image {
@@ -201,24 +201,38 @@ main {
   padding: 0.5rem;
   border-bottom: 5px solid #ff5733; }
 
-.edu-skills {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-areas: "edu-skills-header edu-skills-header edu-skills-header" "education skills skills" "education languages languages";
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: stretch; }
-
 .edu-skills-header {
-  grid-area: edu-skills-header; }
+  grid-area: edu-skills-header;
+  text-align: center; }
+
+.edu-header {
+  text-align: center; }
+
+.skills-header {
+  grid-area: skills-header;
+  text-align: center; }
 
 .education {
   grid-area: education; }
 
 .skills {
-  grid-area: skills; }
+  grid-area: skills;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: "skills-header skills-header skills-header skills-header skills-header skills-header";
+  grid-template-columns: repeat(6, 1fr); }
 
 .languages {
-  grid-area: languages; }
+  grid-area: languages;
+  text-align: center; }
+
+.item {
+  justify-self: center; }
+  .item p {
+    text-align: center; }
+  .item img:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease-out; }
 
 /* === Projects === */
 .projects {

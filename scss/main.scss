@@ -78,7 +78,10 @@ main {
     grid-gap: 2rem;
     grid-template-areas: 
     "bioimage bio bio"
-    "job1 job2 job3";
+    "job1 job2 job3"
+    "edu-skills-header edu-skills-header edu-skills-header"
+    "education skills skills"
+    "education languages languages";
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -115,20 +118,18 @@ main {
 }
 
 
-.edu-skills {
-    display: grid;
-    grid-gap: 2rem;
-    grid-template-areas:
-    "edu-skills-header edu-skills-header edu-skills-header"
-    "education skills skills"
-    "education languages languages";
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: stretch;
-    
-}
-
 .edu-skills-header {
     grid-area: edu-skills-header;
+    text-align: center;
+}
+
+.edu-header{
+    text-align: center;
+}
+
+.skills-header {
+    grid-area: skills-header;
+    text-align: center;
 }
 
 .education {
@@ -137,13 +138,29 @@ main {
 
 .skills {
     grid-area: skills;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "skills-header skills-header skills-header skills-header skills-header skills-header";
+    grid-template-columns: repeat(6, 1fr);
+    
 }
 
 .languages {
     grid-area: languages;
+    text-align: center;
 }
 
-
+.item {
+  justify-self: center;
+      p {
+          text-align: center;
+    }
+    img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        @include easeOut();
+    }
+}
 
 
 /* === Projects === */

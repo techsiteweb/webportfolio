@@ -73,12 +73,6 @@ main {
 
 /* --- About --- */
 
-.education {
-    display: grid;
-    grid-template-columns: 25% auto;
-    
-}
-
 .about-info {
     display: grid;
     grid-gap: 2rem;
@@ -119,6 +113,37 @@ main {
     padding: 0.5rem;
     border-bottom: 5px solid $secondary-color;
 }
+
+
+.edu-skills {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-areas:
+    "edu-skills-header edu-skills-header edu-skills-header"
+    "education skills skills"
+    "education languages languages";
+    grid-template-columns: repeat(3, 1fr);
+    
+}
+
+.edu-skills-header {
+    grid-area: edu-skills-header;
+}
+
+.education {
+    grid-area: education;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.languages {
+    grid-area: languages;
+}
+
+
+
 
 /* === Projects === */
 .projects {

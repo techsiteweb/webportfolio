@@ -49,6 +49,19 @@ $background-opacity: 0.9;
 
 
 /* Here we add the media query mixins for responsiveness */
+@mixin mainXm {
+    @media screen and (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin mainSm {
+    @media screen and (min-width: 376px) and (max-width: 630px) {
+        @content;
+    }
+}
+
+
 @mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;
@@ -69,6 +82,18 @@ $background-opacity: 0.9;
 
 @mixin mediaXl {
     @media screen and (min-width: 1201px) {
+        @content;
+    }
+}
+
+@mixin aboutSm {
+    @media screen and (max-width: 630px) {
+        @content;
+    }
+}
+
+@mixin aboutXm {
+    @media screen and (max-width: 462px) {
         @content;
     }
 }

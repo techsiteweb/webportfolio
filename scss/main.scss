@@ -121,15 +121,18 @@ main {
 .edu-skills-header {
     grid-area: edu-skills-header;
     text-align: center;
+    padding: 1.5rem 0;
 }
 
 .edu-header{
     text-align: center;
+    padding-bottom: 2.2rem;
 }
 
 .skills-header {
     grid-area: skills-header;
     text-align: center;
+    padding-bottom: 1.8rem;
 }
 
 .education {

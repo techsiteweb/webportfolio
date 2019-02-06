@@ -154,6 +154,14 @@ header {
 .text-second {
   color: #ff5733; }
 
+.text-decor {
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  background: #294f71;
+  padding: 1rem 0.5rem 0.5rem; }
+
 main {
   padding: 4rem;
   min-height: calc(100vh - 4rem); }
@@ -164,6 +172,9 @@ main {
       main .icons a:hover {
         color: #ff5733;
         transition: all 0.3s ease-out; }
+  main .media-icons {
+    padding-left: 0.6rem;
+    list-style: none; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -173,7 +184,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 2rem;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3" "edu-skills-header edu-skills-header edu-skills-header" "education skills skills" "education languages languages";
+  grid-template-areas: "bioimage bio bio" "experience-header experience-header experience-header" "job1 job2 job3" "edu-skills-header edu-skills-header edu-skills-header" "education skills skills" "languages languages languages";
   grid-template-columns: repeat(3, 1fr); }
 
 .about-image {
@@ -187,6 +198,9 @@ main {
 .bio {
   grid-area: bio;
   font-size: 1.5rem; }
+
+.bio-desc {
+  margin-top: 0.5rem; }
 
 .job-1 {
   grid-area: job1; }
@@ -202,22 +216,37 @@ main {
   padding: 0.5rem;
   border-bottom: 5px solid #ff5733; }
 
+.experience-header {
+  grid-area: experience-header;
+  padding: 1.5rem 0; }
+
 .edu-skills-header {
   grid-area: edu-skills-header;
-  text-align: center;
   padding: 1.5rem 0; }
 
 .edu-header {
   text-align: center;
-  padding-bottom: 2.2rem; }
+  letter-spacing: 0.15rem;
+  padding: 1.8rem 0 1.6rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 87, 51, 0.5); }
+
+.edu-item p, .job h5 {
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+  opacity: 0.8; }
 
 .skills-header {
   grid-area: skills-header;
+  max-height: 100px;
   text-align: center;
-  padding-bottom: 1.8rem; }
+  letter-spacing: 0.15rem;
+  padding: 1.8rem 0 1.6rem;
+  border: 1px solid rgba(255, 87, 51, 0.5); }
 
 .education {
-  grid-area: education; }
+  grid-area: education;
+  height: auto; }
 
 .skills {
   grid-area: skills;
@@ -228,7 +257,10 @@ main {
 
 .languages {
   grid-area: languages;
-  text-align: center; }
+  text-align: center;
+  letter-spacing: 0.15rem; }
+  .languages p {
+    font-size: 1.3rem; }
 
 .item {
   justify-self: center; }

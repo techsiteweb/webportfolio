@@ -46,6 +46,15 @@ header {
     color: $secondary-color;
 }
 
+.text-decor {
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    background: lighten($primary-color, 5);
+    padding: 1rem 0.5rem 0.5rem;
+}
+
 main {
     padding: 4rem;
     min-height: calc(100vh - 4rem);
@@ -61,6 +70,10 @@ main {
                 @include easeOut();
             }
         }
+    }
+    .media-icons {
+        padding-left: 0.6rem;
+        list-style:none;
     }
     
     &#home {
@@ -79,10 +92,11 @@ main {
     grid-gap: 2rem;
     grid-template-areas: 
     "bioimage bio bio"
+    "experience-header experience-header experience-header"
     "job1 job2 job3"
     "edu-skills-header edu-skills-header edu-skills-header"
     "education skills skills"
-    "education languages languages";
+    "languages languages languages";
     grid-template-columns: repeat(3, 1fr);
 }
 
@@ -98,6 +112,10 @@ main {
 .bio {
     grid-area: bio;
     font-size: 1.5rem;
+}
+
+.bio-desc {
+    margin-top: 0.5rem;
 }
 
 .job-1 {
@@ -118,26 +136,42 @@ main {
     border-bottom: 5px solid $secondary-color;
 }
 
+.experience-header {
+    grid-area: experience-header;
+    padding: 1.5rem 0;
+}
 
 .edu-skills-header {
     grid-area: edu-skills-header;
-    text-align: center;
     padding: 1.5rem 0;
 }
 
 .edu-header{
+    // max-height: 90px;
     text-align: center;
-    padding-bottom: 2.2rem;
+    letter-spacing: 0.15rem;
+    padding: 1.8rem 0 1.6rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba($secondary-color, 0.5);
 }
 
+.edu-item p, .job h5 {
+   letter-spacing: 0.15rem;
+   font-weight: 600;
+   opacity: 0.8;
+}
 .skills-header {
     grid-area: skills-header;
+    max-height: 100px;
     text-align: center;
-    padding-bottom: 1.8rem;
+    letter-spacing: 0.15rem;
+    padding: 1.8rem 0 1.6rem;
+    border: 1px solid rgba($secondary-color, 0.5);
 }
 
 .education {
     grid-area: education;
+    height: auto;
 }
 
 .skills {
@@ -153,6 +187,10 @@ main {
 .languages {
     grid-area: languages;
     text-align: center;
+    letter-spacing: 0.15rem;
+        p {
+            font-size: 1.3rem;
+        }
 }
 
 .item {

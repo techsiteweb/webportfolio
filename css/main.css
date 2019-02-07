@@ -200,7 +200,10 @@ main {
   font-size: 1.5rem; }
 
 .bio-desc {
-  margin-top: 0.5rem; }
+  margin-top: 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.7); }
 
 .job-1 {
   grid-area: job1; }

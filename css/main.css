@@ -154,7 +154,8 @@ header {
   width: 100%; }
 
 .text-second {
-  color: #ff5733; }
+  color: #ff5733;
+  letter-spacing: 0.2rem; }
 
 .text-decor {
   font-weight: 600;
@@ -222,7 +223,14 @@ main {
 .job {
   background: #294f71;
   padding: 0.5rem;
-  border-bottom: 5px solid #ff5733; }
+  border-bottom: 5px solid #ff5733;
+  text-align: left; }
+
+.job h3 {
+  margin-bottom: 1rem; }
+
+.job p {
+  letter-spacing: 0.1rem; }
 
 .experience-header {
   grid-area: experience-header;

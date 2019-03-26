@@ -45,6 +45,7 @@ header {
 
 .text-second {
     color: $secondary-color;
+    letter-spacing: 0.2rem;
 }
 
 .text-decor {
@@ -144,8 +145,16 @@ main {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
     border-bottom: 5px solid $secondary-color;
+    text-align: left;
 }
 
+.job h3 {
+   margin-bottom: 1rem; 
+}
+
+.job p {
+    letter-spacing: 0.1rem;
+}
 .experience-header {
     grid-area: experience-header;
     padding: 1.5rem 0;
@@ -213,7 +222,6 @@ main {
         @include easeOut();
     }
 }
-
 
 /* === Projects === */
 .projects {

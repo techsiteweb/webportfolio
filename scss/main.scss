@@ -229,6 +229,10 @@ main {
     grid-gap: 1.3rem;
     grid-template-columns: repeat(3, 1fr);
     
+    a {
+        text-decoration: none;
+    }
+    
     img {
         width: 100%;
         border: 3px solid rgb(255, 255, 255);

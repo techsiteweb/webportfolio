@@ -67,8 +67,8 @@ $text-color: rgb(255,255,255);*/
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url("../images/dog.jpg");
-      background-image: center;
+      background: url("../images/onel-6.png");
+      background-position: center;
       border-radius: 50%;
       border: 3px solid #ff5733; }
   .menu .nav-item {
@@ -133,12 +133,18 @@ body {
       background: rgba(34, 66, 94, 0.9);
       z-index: -1; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 400; }
-  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
     font-size: 6rem; }
-  h1.sm-heading, h2.sm-heading, h3.sm-heading {
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
     letter-spacing: 0.2rem;
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
@@ -247,7 +253,8 @@ main {
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 87, 51, 0.5); }
 
-.edu-item p, .job h5 {
+.edu-item p,
+.job h5 {
   letter-spacing: 0.15rem;
   font-weight: 600;
   opacity: 0.8; }
@@ -326,7 +333,8 @@ main {
   margin-bottom: 2rem;
   padding: 0.2rem 0; }
 
-.my-email, .my-phone {
+.my-email,
+.my-phone {
   padding: 0.4rem 0;
   letter-spacing: 0.1rem; }
 

@@ -7,7 +7,7 @@ This is my multipage, mobile-first, responsive Web Developer Portfolio.
 
 ## Introduction
 
-A crisp, simple and informative portfolio page dedicated to showcasing my projects, experience, education, contact information while
+A crisp, simple and informative portfolio site dedicated to showcasing my projects, experience, education, contact information while
 displaying my design trends and abilities.
 
 ## Technologies

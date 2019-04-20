@@ -1,131 +1,126 @@
 /* == Xtra Large Screens == */
+
 @include mediaXl {
-   .projects {
-       grid-template-columns: repeat(4, 1fr);
-   } 
+    .projects {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* == Desktop & Laptop Screens == */
+
 @include mediaLg {
     .projects {
-       grid-template-columns: repeat(3, 1fr);
-   }
-   
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .skills {
         grid-area: skills;
         display: grid;
         grid-gap: 1rem;
-        grid-template-areas: 
-        "skills-header skills-header skills-header";
+        grid-template-areas: "skills-header skills-header skills-header";
         grid-template-columns: repeat(3, 1fr);
-        
+
     }
 
 }
 
 /* == Small Laptops and Tables == */
+
 @include mediaMd {
     main {
         align-items: center;
         text-align: center;
-        
+
         .lg-heading {
             line-height: 1;
             margin-bottom: 1rem;
         }
     }
-    
-    ul.menu-nav,div.menu-branding {
+
+    ul.menu-nav,
+    div.menu-branding {
         float: none;
         width: 100%;
         min-height: 0;
-        
+
         &.show {
             transform: translate3d(0, 0, 0);
         }
     }
-    
+
     .menu-nav {
         height: 75vh;
         transform: translate3d(-100%, 0, 0);
         font-size: 24px;
     }
-    
+
     .menu-branding {
         height: 25vh;
         transform: translate3d(100%, 0, 0);
-        
+
         .portrait {
-            background: url("../images/dog.jpg");
+            background: url("../images/onel-mobile.png");
+            background-position: center;
             width: 150px;
             height: 150px
         }
     }
-    
+
     .about-info {
-        grid-template-areas:
-        "bioimage bioimage"
-        "bio bio"
-        "experience experience"
-        "job1 job1"
-        "job2 job3"
-        "edu-skills-header edu-skills-header"
-        "education skills"
-        "languages languages";
-        
+        grid-template-areas: "bioimage bioimage" "bio bio" "experience experience" "job1 job1" "job2 job3" "edu-skills-header edu-skills-header" "education skills" "languages languages";
+
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .experience-header {
         grid-area: experience;
     }
-    
+
     .skills {
         grid-area: skills;
         display: grid;
         grid-gap: 1rem;
-        grid-template-areas: 
-        "skills-header skills-header";
+        grid-template-areas: "skills-header skills-header";
         grid-template-columns: repeat(2, 1fr);
-        
+
     }
 
     .edu-item {
         text-align: left;
     }
-    
+
     .bio p {
         text-align: left;
     }
-   
+
     .projects {
-       grid-template-columns: repeat(2, 1fr);
-   }
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
 /* == Smartphones == */
 
 @include mainXm {
-   h1.lg-heading {
-        font-size: 3rem; 
+    h1.lg-heading {
+        font-size: 3rem;
     }
-    .sm-heading{
+    .sm-heading {
         font-size: 1.2rem;
     }
-    
+
     .contact-lg-heading {
         font-size: 2.2rem;
     }
-     .contact-sm-heading {
+    .contact-sm-heading {
         font-size: 0.8rem;
     }
-    
+
 }
 
 @include mainSm {
     h1.lg-heading {
-        font-size: 3.5rem; 
+        font-size: 3.5rem;
     }
     .sm-heading {
         font-size: 1.5rem;
@@ -133,7 +128,7 @@
     .contact-lg-heading {
         font-size: 2.7rem;
     }
-     .contact-sm-heading {
+    .contact-sm-heading {
         font-size: 1.1rem;
     }
 }
@@ -143,43 +138,32 @@
     main#home h1 {
         margin-top: 10vh;
     }
- 
+
     .projects {
-       grid-template-columns: 1fr;
-   }
-   
+        grid-template-columns: 1fr;
+    }
+
 }
 
 @include aboutSm {
     .about-info {
-        grid-template-areas:
-        "bioimage"
-        "bio"
-        "experience"
-        "job1"
-        "job2"
-        "job3"
-        "edu-skills-header"
-        "education"
-        "skills"
-        "languages";
-        
+        grid-template-areas: "bioimage" "bio" "experience" "job1" "job2" "job3" "edu-skills-header" "education" "skills" "languages";
+
         grid-template-columns: 1fr;
     }
-    
+
     .skills {
         grid-area: skills;
         display: grid;
         grid-gap: 1rem;
-        grid-template-areas: 
-        "skills-header skills-header skills-header";
+        grid-template-areas: "skills-header skills-header skills-header";
         grid-template-columns: repeat(3, 1fr);
     }
 
     .edu-item {
         text-align: left;
     }
-    
+
     .bio p {
         text-align: left;
     }
@@ -190,31 +174,27 @@
         grid-area: skills;
         display: grid;
         grid-gap: 1rem;
-        grid-template-areas: 
-        "skills-header skills-header";
+        grid-template-areas: "skills-header skills-header";
         grid-template-columns: repeat(2, 1fr);
-        
+
     }
 }
 
 
 @include contactSm {
     .boxes {
-        grid-template-areas:
-        "address"
-        "contact-form"
-        "map";
+        grid-template-areas: "address" "contact-form" "map";
         grid-template-columns: 1fr;
     }
-    
-     .address {
+
+    .address {
         grid-area: address;
     }
-    
+
     .map {
         grid-area: map;
     }
-    
+
     .contact-form {
         grid-area: contact-form;
     }
@@ -222,20 +202,18 @@
 
 @include contactMd {
     .boxes {
-        grid-template-areas:
-        "address map"
-        "contact-form contact-form";
+        grid-template-areas: "address map" "contact-form contact-form";
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .address {
         grid-area: address;
     }
-    
+
     .map {
         grid-area: map;
     }
-    
+
     .contact-form {
         grid-area: contact-form;
     }
